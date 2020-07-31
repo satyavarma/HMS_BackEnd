@@ -102,6 +102,7 @@ securityRoute.route('/out')
                 inDetails: student.inDetails,
                 outDetails: req.body.outDetails,
                 treatedBy: student.treatedBy,
+                dConf: student.dConf,
                 prescription: student.prescription,
                 pConf: student.pConf
             })

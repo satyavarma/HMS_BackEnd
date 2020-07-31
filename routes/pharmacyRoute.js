@@ -53,18 +53,18 @@ pharmacyRoute.route('/search')
         if(student == null){
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.json({info:'student should enter at security point', success: true});
+            res.json({info:'student should enter at security point', success: false});
         }
         else if( student != null && !student.dConf){
             console.log('------------entered');
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.json({info:'prescription not forwarded', success: true});
+            res.json({info:'prescription not forwarded', success: false});
         }
         else {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.json({info:'found', success: true, prescription: student.prescription});
+            res.json({info:'found', success: true, student: student});
         
         }
     })
@@ -94,7 +94,7 @@ pharmacyRoute.route('/done')
             .then((student) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
-                res.json({info:'completed', success: true, id: student.id});
+                res.json({info:'Done', success: true, id: student.id});
             })
         }
     })

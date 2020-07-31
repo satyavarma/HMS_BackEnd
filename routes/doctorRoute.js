@@ -65,6 +65,7 @@ doctorRoute.route('/prescription')
             student.dConf = req.body.dConf ? req.body.dConf : null ;
             student.save()
             .then((student) => {
+                console.log(student);
                 res.statusCode=200;
                 res.setHeader('Content-Type', 'application/json');
                 res.json({info: 'Successfully forwarded to pharmacy', success: true});
