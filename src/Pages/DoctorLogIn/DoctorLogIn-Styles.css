@@ -1,0 +1,15 @@
+.doctorLogIn{
+    display: inline-block;
+    margin-top: 150px;
+    margin-left: 42%;
+}
+
+h3{
+    color: teal;
+    margin-bottom: 10px;
+}
+
+.modalButton{
+    color: white;
+    background: teal;
+}

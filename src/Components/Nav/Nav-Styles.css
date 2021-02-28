@@ -1,0 +1,22 @@
+.nav_ele{
+    display: inline;
+    text-decoration: none;
+    vertical-align: none;
+}
+.nav{
+    background-color: teal;
+    margin-bottom: 0px;
+}
+.portal_name{
+    color:white;
+    padding:30px;
+    font-size: 16px;
+}
+.portal_name:hover{
+    color:teal;
+    background-color:white;
+    text-decoration: none; 
+    border:1px solid teal;  
+    padding-top:2px;
+    padding-bottom:9px; 
+}

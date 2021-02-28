@@ -1,0 +1,18 @@
+.pharmacist{
+    max-width: 600px;
+    margin-top: 150px;
+    margin-left: 35%;
+}
+
+.cardfooter{
+    color:teal;
+    margin-left: auto;
+    float: right;
+}
+
+.cardtitle{
+    font-size: 50px;
+    padding: 10px;
+    font-weight: 1000;
+    color: teal;
+}
