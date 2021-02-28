@@ -122,7 +122,7 @@ securityRoute.route('/out')
         console.log(err);
         res.statusCode = 403;
         res.setHeader('Content-Type', 'application/json');
-        res.json({info:'something went wrong', success: false, error: err})
+        res.json({info:'Something Went Wrong', success: false, error: err})
     })
 })
 
