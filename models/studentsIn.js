@@ -8,6 +8,10 @@ var StudentsIn = new Schema({
         required: true,
         unique: true
     },
+    problem:{
+        type:String,
+        required:true,
+    },
     inDetails:{
         type:String,
         required: true

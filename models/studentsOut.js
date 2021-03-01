@@ -11,6 +11,10 @@ var StudentsOut = new Schema({
         type: String,
         required:false,
     },
+    problem:{
+        type:String,
+        required:true,
+    },
     inDetails:{
         type:String,
         required: true

@@ -1,0 +1,38 @@
+public class Solution{
+
+     public static void main(String []args){
+        
+         int[] arr = new int[]{1,2,2,2,1};
+         int max = 0;
+         for (int i=0;i<arr.length; i++){
+             int found = 0;
+             int another = 0;
+             int one = arr[i];
+             int count = 1;
+             for(int j=i+1; j<arr.length; j++){
+                if(arr[j] != one){
+                    if(found != 1){
+                        found = 1;
+                        another = arr[j]; 
+                        count = count + 1;
+                    }else{
+                        if(arr[j] == another){
+                            count ++;
+                        }else{
+                            if(count> max){
+                                max = count;
+                            }
+                            break;
+                        }   
+                    }
+                }
+                else{
+                    count=count+1;
+                }
+             }
+         }
+         System.out.println("max :"+max);
+         
+     }
+     
+}

@@ -50,6 +50,7 @@ securityRoute.route('/in')
 .post(cors.corsWithOptions, (req, res) => {
     console.log('------------------------studentIn');
     console.log(req.body.id);
+    console.log(req.body.problem);
     studentsInCollection.findOne({id:req.body.id})
     .then((student) => {
         console.log(student);
@@ -63,6 +64,7 @@ securityRoute.route('/in')
             console.log('================null');
             studentsInCollection.create({
                 id: req.body.id,
+                problem: req.body.problem,
                 inDetails: req.body.inDetails,
             })
             .then((student) => {
@@ -98,8 +100,9 @@ securityRoute.route('/out')
         else{
             console.log('!===null');
             studentsOutCollection.create({
-                id: student.id+student.inDetails,
+                id: student.id+"_"+student.inDetails,
                 college_id:student.id,
+                problem:student.problem,
                 inDetails: student.inDetails,
                 outDetails: req.body.outDetails,
                 treatedBy: student.treatedBy,
